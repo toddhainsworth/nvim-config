@@ -1,6 +1,9 @@
 -- Easier escape
 vim.keymap.set('i', 'jj', '<esc>')
 
+-- Re-open the config directory
+vim.keymap.set('n', '<leader>ev', '<cmd>e ~/.config/nvim/<cr>')
+
 -- Window/pane movement
 vim.keymap.set('n', '<leader>wq', '<C-w>h')
 vim.keymap.set('n', '<leader>ws', '<C-w>j')
@@ -15,10 +18,11 @@ vim.keymap.set('n', 'E', '$')
 vim.keymap.set('n', 'n', 'nzz')
 
 -- Convenience
-vim.keymap.set('n', '<leader>hl', ':nohl<cr>')
+vim.keymap.set('n', '<leader>hl', '<cmd>nohl<cr>')
 
 -- NvimTree
 vim.keymap.set('n', '<leader>nt', '<cmd>NvimTreeToggle<cr>')
+vim.keymap.set('n', '<leader>nf', '<cmd>NvimTreeFindFile<cr>')
 
 -- Telescope
 local builtin = require('telescope.builtin')
@@ -31,6 +35,6 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('', '<F1>', '<nop')
 
 -- Easier buffer movement
-vim.keymap.set('n', '<left>', ':bp<cr>')
-vim.keymap.set('n', '<right>', ':bn<cr>')
+vim.keymap.set('n', '<left>', '<cmd>bp<cr>')
+vim.keymap.set('n', '<right>', '<cmd>bn<cr>')
 

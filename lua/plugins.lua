@@ -8,7 +8,7 @@ require('packer').startup(function(use)
   use 'tpope/vim-fugitive'
 
   -- Surround things
-  use 'tpope/vim-surround'
+  use 'kylechui/nvim-surround'
 
   -- Highlight yanks
   use 'machakann/vim-highlightedyank'
@@ -23,7 +23,10 @@ require('packer').startup(function(use)
   -- Find things
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-treesitter/nvim-treesitter'}
+    }
   }
   -- Find things with FZF
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -36,9 +39,34 @@ require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+  use 'ms-jpq/coq_nvim'
+
+  -- OrgMode
+  use 'nvim-orgmode/orgmode'
 end)
 
 require('telescope').load_extension('fzf')
 require('nvim_comment').setup({ comment_empty = false })
 require('leap').set_default_keymaps()
-require('lspconfig').pyright.setup{}
+require('orgmode').setup_ts_grammar()
+
+local lspconfig = require('lspconfig')
+local coq = require('coq')
+lspconfig.pyright.setup(coq.lsp_ensure_capabilities())
+
+require('nvim-tree').setup{
+  git = {
+    enable = true,
+    ignore = false
+  },
+  sort_by = "case_sensitive",
+  view = {
+    adaptive_size = true,
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  }
+}
