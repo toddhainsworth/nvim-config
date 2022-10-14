@@ -8,7 +8,7 @@ vim.keymap.set('n', '<leader>ev', '<cmd>e ~/.config/nvim/<cr>')
 vim.keymap.set('n', '<leader>wq', '<C-w>h')
 vim.keymap.set('n', '<leader>ws', '<C-w>j')
 vim.keymap.set('n', '<leader>ww', '<C-w>k')
-vim.keymap.set('n', '<leader>wd', '<C-w>l')
+vim.keymap.set('n', '<leader>we', '<C-w>l')
 
 -- Sane movement
 vim.keymap.set('n', 'j', 'gj')
