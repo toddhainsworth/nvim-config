@@ -16,6 +16,8 @@ vim.o.wrap = false
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
 vim.o.expandtab = true
+vim.o.termguicolors = true
+vim.o.completeopt = "menu,preview,menuone"
 
 vim.cmd("colorscheme minimalist")
 
