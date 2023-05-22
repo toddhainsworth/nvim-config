@@ -32,29 +32,16 @@ require('packer').startup(function(use)
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
   -- Comment things
-  use 'terrortylor/nvim-comment'
-
-  -- Navigate in a file
-  use 'ggandor/leap.nvim'
+  use 'numToStr/Comment.nvim'
 
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'ms-jpq/coq_nvim'
 
-  -- OrgMode
-  use 'nvim-treesitter/nvim-treesitter'
-  use {'nvim-orgmode/orgmode', config = function()
-    requires('orgmode').setup{}
-  end
-  }
-
   use 'jose-elias-alvarez/typescript.nvim'
 end)
 
 require('telescope').load_extension('fzf')
-require('nvim_comment').setup({ comment_empty = false })
-require('leap').set_default_keymaps()
-require('orgmode').setup_ts_grammar()
 require('typescript').setup({})
 require('nvim-surround').setup({
     aliases = {
