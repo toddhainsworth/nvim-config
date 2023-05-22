@@ -32,7 +32,7 @@ vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
 -- Please no help
-vim.keymap.set('', '<F1>', '<nop')
+vim.keymap.set('', '<F1>', '<nop>')
 
 -- Easier buffer movement
 vim.keymap.set('n', '<left>', '<cmd>bp<cr>')

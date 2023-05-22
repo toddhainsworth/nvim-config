@@ -42,13 +42,25 @@ require('packer').startup(function(use)
   use 'ms-jpq/coq_nvim'
 
   -- OrgMode
-  use 'nvim-orgmode/orgmode'
+  use 'nvim-treesitter/nvim-treesitter'
+  use {'nvim-orgmode/orgmode', config = function()
+    requires('orgmode').setup{}
+  end
+  }
+
+  use 'jose-elias-alvarez/typescript.nvim'
 end)
 
 require('telescope').load_extension('fzf')
 require('nvim_comment').setup({ comment_empty = false })
 require('leap').set_default_keymaps()
 require('orgmode').setup_ts_grammar()
+require('typescript').setup({})
+require('nvim-surround').setup({
+    aliases = {
+        ["<"] = "t",
+    },
+})
 
 local lspconfig = require('lspconfig')
 local coq = require('coq')
