@@ -45,4 +45,6 @@ require('packer').startup(function(use)
     'hrsh7th/nvim-cmp'
   }
   use 'jose-elias-alvarez/typescript.nvim'
+
+  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
 end)
