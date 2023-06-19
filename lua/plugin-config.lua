@@ -7,7 +7,8 @@ require('nvim-surround').setup({
 require("mason").setup()
 require("mason-lspconfig").setup {
   ensure_installed = {
-    'tsserver'
+    'tsserver',
+    'rust_analyzer'
   }
 }
 require('Comment').setup {}
@@ -46,6 +47,12 @@ require('mason-lspconfig').setup_handlers {
 lspconfig.tsserver.setup {
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
   cmd = { "typescript-language-server", "--stdio" }
+}
+
+-- lsp - Rust
+lspconfig.rust_analyzer.setup {
+  filetypes = { "rust" },
+  cmd = { "rust-analyzer" }
 }
 
 -- Global mappings.
