@@ -10,6 +10,7 @@ require("mason-lspconfig").setup {
     'tsserver'
   }
 }
+require('Comment').setup {}
 
 -- Language specific
 require('typescript').setup({})
