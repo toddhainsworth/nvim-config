@@ -4,20 +4,24 @@ require('nvim-surround').setup({
         ["<"] = "t",
     },
 })
-require("mason").setup()
-require("mason-lspconfig").setup {
+require('mason').setup()
+require('mason-lspconfig').setup {
   ensure_installed = {
     'tsserver',
     'rust_analyzer'
   }
 }
 require('Comment').setup {}
+require('nvim-autopairs').setup {}
+require('lualine').setup {}
+require('nvim-web-devicons').setup {
+    default = true
+}
 
 -- Language specific
-require('typescript').setup({})
+require('typescript').setup {}
 
 local lspconfig = require('lspconfig')
-
 
 require('nvim-tree').setup{
   git = {

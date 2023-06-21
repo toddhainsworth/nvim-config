@@ -47,5 +47,15 @@ require('packer').startup(function(use)
   }
   use 'jose-elias-alvarez/typescript.nvim'
 
+  -- Magit in Neovim!
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+
+  -- Pair brackets, quotes, etc
+  use 'windwp/nvim-autopairs'
+
+  -- Lualine!
+  use {
+      'nvim-lualine/lualine.nvim',
+      'nvim-tree/nvim-web-devicons'
+  }
 end)
