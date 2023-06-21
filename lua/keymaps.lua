@@ -39,3 +39,5 @@ vim.keymap.set('', '<F1>', '<nop>')
 vim.keymap.set('n', '<left>', '<cmd>bp<cr>')
 vim.keymap.set('n', '<right>', '<cmd>bn<cr>')
 
+-- Neogit
+vim.keymap.set('n', '<leader>ng', '<cmd>Neogit<cr>')
