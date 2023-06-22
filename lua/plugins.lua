@@ -58,4 +58,7 @@ require('packer').startup(function(use)
       'nvim-lualine/lualine.nvim',
       'nvim-tree/nvim-web-devicons'
   }
+
+  -- Zen mode (for writing READMEs)
+  use 'folke/zen-mode.nvim'
 end)
