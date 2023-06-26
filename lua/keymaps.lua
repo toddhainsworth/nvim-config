@@ -41,3 +41,6 @@ vim.keymap.set('n', '<right>', '<cmd>bn<cr>')
 
 -- Neogit
 vim.keymap.set('n', '<leader>ng', '<cmd>Neogit<cr>')
+
+-- Trouble
+vim.keymap.set('n', '<leader>tt', '<cmd>TroubleToggle<cr>')

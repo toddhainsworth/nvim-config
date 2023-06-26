@@ -61,4 +61,7 @@ require('packer').startup(function(use)
 
   -- Zen mode (for writing READMEs)
   use 'folke/zen-mode.nvim'
+
+  -- Errors and such
+  use 'folke/trouble.nvim'
 end)
