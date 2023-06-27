@@ -64,4 +64,10 @@ require('packer').startup(function(use)
 
   -- Errors and such
   use 'folke/trouble.nvim'
+
+  -- Preview markdown
+  use({
+      "iamcco/markdown-preview.nvim",
+      run = function() vim.fn["mkdp#util#install"]() end,
+  })
 end)
