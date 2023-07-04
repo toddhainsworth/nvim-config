@@ -66,8 +66,10 @@ require('packer').startup(function(use)
   use 'folke/trouble.nvim'
 
   -- Preview markdown
-  use({
-      "iamcco/markdown-preview.nvim",
-      run = function() vim.fn["mkdp#util#install"]() end,
-  })
+  use {
+      'iamcco/markdown-preview.nvim',
+      run = function() vim.fn['mkdp#util#install']() end,
+  }
+
+  use 'mechatroner/rainbow_csv'
 end)
