@@ -19,5 +19,7 @@ vim.o.shiftwidth = 4
 vim.o.expandtab = true
 vim.o.termguicolors = true
 vim.o.completeopt = 'menu,preview,menuone'
+vim.o.list = true
+vim.o.listchars = "eol:↴"
 
 vim.cmd('colorscheme minimalist')

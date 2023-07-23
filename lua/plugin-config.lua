@@ -11,11 +11,19 @@ require('mason-lspconfig').setup {
     'rust_analyzer'
   }
 }
+require('neogit').setup {
+    disable_contextual_highlighting = false
+}
 require('Comment').setup {}
 require('nvim-autopairs').setup {}
 require('lualine').setup {}
 require('nvim-web-devicons').setup {
     default = true
+}
+require('indent_blankline').setup {
+    show_end_of_line = true,
+    show_current_context = true,
+    show_current_context_start = true
 }
 
 -- Language specific

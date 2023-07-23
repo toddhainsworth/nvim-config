@@ -48,7 +48,7 @@ require('packer').startup(function(use)
   use 'jose-elias-alvarez/typescript.nvim'
 
   -- Magit in Neovim!
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  use { 'NeogitOrg/neogit', requires = 'nvim-lua/plenary.nvim' }
 
   -- Pair brackets, quotes, etc
   use 'windwp/nvim-autopairs'
@@ -71,5 +71,9 @@ require('packer').startup(function(use)
       run = function() vim.fn['mkdp#util#install']() end,
   }
 
+  -- Make CSVs readable
   use 'mechatroner/rainbow_csv'
+
+  -- Indent guides - I missed this soooo much
+  use "lukas-reineke/indent-blankline.nvim"
 end)
