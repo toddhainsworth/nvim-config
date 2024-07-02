@@ -20,14 +20,18 @@ require('lualine').setup {}
 require('nvim-web-devicons').setup {
     default = true
 }
-require('indent_blankline').setup {
-    show_end_of_line = true,
-    show_current_context = true,
-    show_current_context_start = true
-}
+require('ibl').setup {}
 
 -- Language specific
-require('typescript').setup {}
+require("typescript-tools").setup {}
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.ts*",
+  command = ":TSToolsRemoveUnusedImports",
+})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.ts*",
+  command = ":PrettierAsync",
+})
 
 local lspconfig = require('lspconfig')
 
@@ -56,10 +60,10 @@ require('mason-lspconfig').setup_handlers {
 }
 
 -- lsp - TypeScript
-lspconfig.tsserver.setup {
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
-  cmd = { "typescript-language-server", "--stdio" }
-}
+-- lspconfig.tsserver.setup {
+--   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+--   cmd = { "typescript-language-server", "--stdio" }
+-- }
 
 -- lsp - Rust
 lspconfig.rust_analyzer.setup {

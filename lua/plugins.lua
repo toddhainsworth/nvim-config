@@ -45,7 +45,16 @@ require('packer').startup(function(use)
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp'
   }
-  use 'jose-elias-alvarez/typescript.nvim'
+  use {
+      'prettier/vim-prettier',
+      run='npm install'
+  }
+
+  -- Typescript Goodies
+  use {
+      'pmizio/typescript-tools.nvim',
+      requires = { 'nvim-lua/plenary.nvim', 'neovim/nvim-lspconfig' },
+  }
 
   -- Magit in Neovim!
   use { 'NeogitOrg/neogit', requires = 'nvim-lua/plenary.nvim' }
@@ -75,5 +84,8 @@ require('packer').startup(function(use)
   use 'mechatroner/rainbow_csv'
 
   -- Indent guides - I missed this soooo much
-  use "lukas-reineke/indent-blankline.nvim"
+  use 'lukas-reineke/indent-blankline.nvim'
+
+  -- Language packs
+  use 'sheerun/vim-polyglot'
 end)

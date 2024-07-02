@@ -44,3 +44,9 @@ vim.keymap.set('n', '<leader>ng', '<cmd>Neogit<cr>')
 
 -- Trouble
 vim.keymap.set('n', '<leader>tt', '<cmd>TroubleToggle<cr>')
+
+-- Prettier
+vim.keymap.set('n', '<leader>p', '<cmd>PrettierAsync<cr>')
+
+-- MarkdownPreview
+vim.keymap.set('n', '<leader>md', '<cmd>MarkdownPreview<cr>')
