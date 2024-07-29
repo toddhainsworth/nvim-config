@@ -3,6 +3,11 @@ require('packer').startup(function(use)
 
   -- Colour
   use 'dikiaap/minimalist'
+  use 'Mofiqul/vscode.nvim'
+  use 'arcticicestudio/nord-vim'
+  use 'sainnhe/sonokai'
+  use 'sjl/badwolf'
+  use 'rktjmp/lush.nvim'
 
   -- Git
   use 'tpope/vim-fugitive'
@@ -26,7 +31,7 @@ require('packer').startup(function(use)
       {'nvim-lua/plenary.nvim'},
       {'nvim-treesitter/nvim-treesitter'},
       {'nvim-treesitter/nvim-treesitter-textobjects'}
-    }
+    },
   }
   -- Find things with FZF
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -45,6 +50,8 @@ require('packer').startup(function(use)
     'hrsh7th/cmp-cmdline',
     'hrsh7th/nvim-cmp'
   }
+
+  -- Prettier
   use {
       'prettier/vim-prettier',
       run='npm install'
@@ -61,12 +68,6 @@ require('packer').startup(function(use)
 
   -- Pair brackets, quotes, etc
   use 'windwp/nvim-autopairs'
-
-  -- Lualine!
-  use {
-      'nvim-lualine/lualine.nvim',
-      'nvim-tree/nvim-web-devicons'
-  }
 
   -- Zen mode (for writing READMEs)
   use 'folke/zen-mode.nvim'

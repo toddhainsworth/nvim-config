@@ -50,3 +50,6 @@ vim.keymap.set('n', '<leader>p', '<cmd>PrettierAsync<cr>')
 
 -- MarkdownPreview
 vim.keymap.set('n', '<leader>md', '<cmd>MarkdownPreview<cr>')
+
+-- Git Blame
+vim.keymap.set('n', '<leader>gb', '<cmd>Git blame<cr>')

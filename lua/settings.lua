@@ -21,5 +21,6 @@ vim.o.termguicolors = true
 vim.o.completeopt = 'menu,preview,menuone'
 vim.o.list = true
 vim.o.listchars = "eol:↴"
+vim.o.syntax = 'on'
 
-vim.cmd('colorscheme minimalist')
+vim.cmd.colorscheme 'nord'

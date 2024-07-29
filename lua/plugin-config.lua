@@ -16,10 +16,6 @@ require('neogit').setup {
 }
 require('Comment').setup {}
 require('nvim-autopairs').setup {}
-require('lualine').setup {}
-require('nvim-web-devicons').setup {
-    default = true
-}
 require('ibl').setup {}
 
 -- Language specific
@@ -58,12 +54,6 @@ require('mason-lspconfig').setup_handlers {
         require('lspconfig')[server_name].setup(require('cmp_nvim_lsp').default_capabilities())
     end
 }
-
--- lsp - TypeScript
--- lspconfig.tsserver.setup {
---   filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
---   cmd = { "typescript-language-server", "--stdio" }
--- }
 
 -- lsp - Rust
 lspconfig.rust_analyzer.setup {
