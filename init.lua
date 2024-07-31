@@ -1,4 +1,3 @@
-require('plugins')
-require('plugin-config')
-require('settings')
-require('keymaps')
+require("todd.settings")
+require("todd.keymap")
+require("todd.lazy")
