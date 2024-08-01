@@ -4,7 +4,7 @@ local keymap = vim.keymap
 keymap.set("i", "jj", "<esc>")
 
 -- Re-open the config directory
-keymap.set("n", "<leader>ev", "<cmd>e ~/.config/n/<cr>")
+keymap.set("n", "<leader>ev", "<cmd>e ~/.config/nvim/<cr>")
 
 -- Window/pane movement
 keymap.set("n", "<leader>wq", "<C-w>h")
