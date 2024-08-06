@@ -16,6 +16,15 @@ return {
 					group = vim.api.nvim_create_augroup("Format", { clear = true }),
 					buffer = bufnr,
 					callback = function()
+						-- organize imports on save for typescript files
+						if vim.bo.filetype == "typescript" then
+							vim.lsp.buf.execute_command({
+								command = "_typescript.organizeImports",
+								arguments = { vim.api.nvim_buf_get_name(0) },
+								title = "",
+							})
+						end
+
 						vim.lsp.buf.format()
 					end,
 				})
