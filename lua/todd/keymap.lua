@@ -18,6 +18,8 @@ keymap.set("n", "k", "gk")
 keymap.set("n", "B", "^")
 keymap.set("n", "E", "$")
 keymap.set("n", "n", "nzz")
+keymap.set("n", "<Left>", "<C-o>")
+keymap.set("n", "<Right>", "<C-i>")
 
 -- Convenience
 keymap.set("n", "<leader>hl", "<cmd>nohl<cr>")
