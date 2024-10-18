@@ -6,9 +6,7 @@ return {
 		"nvim-telescope/telescope.nvim",
 	},
 	config = function()
-		require("neogit").setup({
-			auto_close_console = false,
-		})
+		require("neogit").setup()
 
 		local keymap = vim.keymap
 

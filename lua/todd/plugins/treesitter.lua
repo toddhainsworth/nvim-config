@@ -25,6 +25,7 @@ return {
 		-- 		"lua",
 		-- 		"vim",
 		-- 		"gitignore",
+		-- 		"query"
 		-- 	},
 		-- 	incremental_selection = {
 		-- 		enable = true,

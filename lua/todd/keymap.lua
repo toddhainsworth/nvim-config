@@ -23,3 +23,6 @@ keymap.set("n", "<Right>", "<C-i>")
 
 -- Convenience
 keymap.set("n", "<leader>hl", "<cmd>nohl<cr>")
+
+-- Sane Search (case insensitive)
+keymap.set("n", "/", "/\\c")

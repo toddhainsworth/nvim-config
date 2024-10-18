@@ -32,7 +32,7 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.close(),
 				["<TAB>"] = cmp.mapping.confirm({
-					behavior = cmp.ConfirmBehavior.Replace,
+					behavior = cmp.ConfirmBehavior.Insert,
 					select = true,
 				}),
 			}),

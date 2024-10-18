@@ -1,8 +1,9 @@
 return {
 	"nvim-neorg/neorg",
 	lazy = false,
-	version = "*", -- Pin Neorg to the latest stable release
+	version = "*",
 	config = function()
+		-- NOTE: doesn't work without TreeSitter
 		require("neorg").setup({
 			load = {
 				["core.defaults"] = {},
