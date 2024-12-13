@@ -24,5 +24,11 @@ keymap.set("n", "<Right>", "<C-i>")
 -- Convenience
 keymap.set("n", "<leader>hl", "<cmd>nohl<cr>")
 
+-- Format JSON file
+keymap.set("n", "<leader>jq", "<cmd>%!jq<cr>")
+
 -- Sane Search (case insensitive)
 keymap.set("n", "/", "/\\c")
+
+-- Toggle Folds
+keymap.set("n", "<Space><Space>", "za")

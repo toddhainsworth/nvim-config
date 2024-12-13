@@ -23,3 +23,7 @@ opt.splitright = true
 opt.splitbelow = true
 opt.termguicolors = true
 opt.wrap = false
+opt.guifont = { "Source Code Pro", "h12" }
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+-- opt.foldtext = "v:lua.vim.treesitter.foldtext()"
