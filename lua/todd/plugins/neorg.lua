@@ -8,12 +8,10 @@ return {
 				["core.defaults"] = {},
 				["core.concealer"] = {},
 				["core.export"] = {},
+				["external.interim-ls"] = {},
 				["core.completion"] = {
-					config = {
-						engine = "nvim-cmp",
-					},
+					config = { engine = { module_name = "external.lsp-completion" } },
 				},
-				["core.integrations.nvim-cmp"] = {},
 				["core.ui.calendar"] = {},
 				["core.dirman"] = {
 					config = {

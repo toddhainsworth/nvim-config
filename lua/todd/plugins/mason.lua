@@ -13,6 +13,7 @@ return {
 				"eslint",
 				"jsonls",
 				"ts_ls",
+				"marksman",
 			},
 		})
 

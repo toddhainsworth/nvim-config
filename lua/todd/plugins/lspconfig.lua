@@ -2,10 +2,16 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
+		"saghen/blink.cmp",
 		{ "folke/neodev.nvim", opts = {} },
 	},
-	config = function()
+	opts = { servers = {
+		ts_ls = {},
+		jsonls = {},
+		eslint = {},
+		marksman = {},
+	} },
+	config = function(_, opts)
 		local nvim_lsp = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
 
@@ -21,7 +27,7 @@ return {
 							vim.lsp.buf.execute_command({
 								command = "_typescript.organizeImports",
 								arguments = { vim.api.nvim_buf_get_name(0) },
-								title = "",
+								title = "Organize Imports",
 							})
 						end
 
@@ -31,32 +37,10 @@ return {
 			end
 		end
 
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-		mason_lspconfig.setup_handlers({
-			function(server)
-				nvim_lsp[server].setup({
-					capabilities = capabilities,
-				})
-			end,
-			["ts_ls"] = function()
-				nvim_lsp["ts_ls"].setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-				})
-			end,
-			["jsonls"] = function()
-				nvim_lsp["jsonls"].setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-				})
-			end,
-			["eslint"] = function()
-				nvim_lsp["eslint"].setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-				})
-			end,
-		})
+		local lspconfig = require("lspconfig")
+		for server, config in pairs(opts.servers) do
+			config.capabilities = require("blink.cmp").get_lsp_capabilities(config.capabilities)
+			lspconfig[server].setup(config)
+		end
 	end,
 }
