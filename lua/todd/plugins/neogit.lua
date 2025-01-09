@@ -5,11 +5,8 @@ return {
 		"sindrets/diffview.nvim",
 		"nvim-telescope/telescope.nvim",
 	},
-	config = function()
-		require("neogit").setup()
-
-		local keymap = vim.keymap
-
-		keymap.set("n", "<leader>ng", "<cmd>Neogit<cr>", { desc = "Open Neogit" })
-	end,
+	opts = {},
+	keys = {
+		{ "<leader>ng", "<cmd>Neogit<cr>", desc = "Open Neogit" },
+	},
 }

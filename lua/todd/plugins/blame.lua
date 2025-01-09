@@ -1,10 +1,7 @@
 return {
 	"FabijanZulj/blame.nvim",
-	config = function()
-		require("blame").setup()
-
-		local keymap = vim.keymap
-
-		keymap.set("n", "<leader>gb", ":BlameToggle<cr>", { desc = "Toggle Git Blame" })
-	end,
+	keys = {
+		{ "<leader>gb", "<cmd>BlameToggle<cr>", desc = "Toggl Git Blame " },
+	},
+	opts = {},
 }

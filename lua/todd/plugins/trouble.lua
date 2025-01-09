@@ -33,7 +33,5 @@ return {
 			desc = "Quickfix List (Trouble)",
 		},
 	},
-	config = function()
-		require("trouble").setup()
-	end,
+	opts = {},
 }
