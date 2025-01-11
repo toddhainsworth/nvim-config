@@ -14,6 +14,7 @@ return {
 				"jsonls",
 				"ts_ls",
 				"marksman",
+				"gopls",
 			},
 		})
 

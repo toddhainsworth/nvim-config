@@ -10,9 +10,9 @@ return {
 		jsonls = {},
 		eslint = {},
 		marksman = {},
+		gopls = {},
 	} },
 	config = function(_, opts)
-		local nvim_lsp = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
 
 		local on_attach = function(client, bufnr)
