@@ -4,8 +4,13 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		"WhoIsSethDaniel/mason-tool-installer.nvim",
 	},
-	config = function()
-		require("mason").setup()
+  opts = {
+    ui = {
+      border = "rounded"
+    }
+  },
+	config = function(opts)
+		require("mason").setup(opts)
 
 		require("mason-lspconfig").setup({
 			automatic_installation = true,
