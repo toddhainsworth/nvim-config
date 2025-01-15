@@ -38,7 +38,7 @@ return {
 		rainbow = {
 			enable = true,
 			disable = { "html" },
-			extended_mode = false,
+			extended_mode = true,
 			max_file_lines = nil,
 		},
 		context_commentstring = {
