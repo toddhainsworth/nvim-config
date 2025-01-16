@@ -15,16 +15,19 @@ return {
 		require("mason-lspconfig").setup({
 			automatic_installation = true,
 			ensure_installed = {
-				"eslint",
-				"jsonls",
 				"ts_ls",
+        "lua_ls",
+				"eslint",
 				"marksman",
 			},
 		})
 
 		require("mason-tool-installer").setup({
 			ensure_installed = {
-				"prettier",
+				"ts_ls",
+				"eslint",
+				"marksman",
+				"prettierd",
 				"stylua",
 				"eslint_d",
 			},
