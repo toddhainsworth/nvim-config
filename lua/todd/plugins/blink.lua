@@ -1,18 +1,31 @@
 return {
-	"saghen/blink.cmp",
-	version = "*",
-	opts = {
-		keymap = { preset = "super-tab" },
-		appearance = {
-			use_nvim_cmp_as_default = true,
-			nerd_font_variant = "mono",
-		},
-		sources = {
-			default = { "lsp", "path", "snippets", "buffer" },
-		},
-		completion = {
-			documentation = { auto_show = true, auto_show_delay_ms = 500 },
-		},
-	},
-	opts_extend = { "sources.default" },
+  "saghen/blink.cmp",
+  version = "*",
+  opts = {
+    keymap = { preset = "super-tab" },
+    appearance = {
+      use_nvim_cmp_as_default = true,
+      nerd_font_variant = "mono",
+    },
+    sources = {
+      default = {
+        "lsp",
+        "path",
+        "snippets",
+        "buffer",
+        "markdown"
+      },
+      providers = {
+        markdown = {
+          name = 'RenderMarkdown',
+          module = 'render-markdown.integ.blink',
+          fallbacks = { 'lsp' },
+        },
+      },
+    },
+    completion = {
+      documentation = { auto_show = true, auto_show_delay_ms = 500 },
+    },
+  },
+  opts_extend = { "sources.default" },
 }
