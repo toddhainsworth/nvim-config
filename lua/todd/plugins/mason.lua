@@ -18,7 +18,6 @@ return {
         "ts_ls",
         "lua_ls",
         "eslint",
-        "marksman",
       },
     })
 
@@ -26,7 +25,6 @@ return {
       ensure_installed = {
         "ts_ls",
         "eslint",
-        "marksman",
         "prettierd",
         "stylua",
         "eslint_d",

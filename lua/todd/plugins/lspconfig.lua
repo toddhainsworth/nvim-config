@@ -17,7 +17,6 @@ return {
         end,
       },
       lua_ls = {},
-      marksman = {},
     }
   },
   config = function(_, opts)
