@@ -8,6 +8,7 @@ return {
   },
   dependencies = {
     "nvim-lua/plenary.nvim",
+    "nvim-telescope/telescope.nvim", -- TODO: replace with snacks-picker
   },
   opts = {
     workspaces = {
